@@ -1,0 +1,8 @@
+#two a:hover{
+    background-color: #9D7394;
+    border-radius: 12px;
+}
+#two.active a{
+    background-color: #9D7394;
+    border-radius: 12px;
+}

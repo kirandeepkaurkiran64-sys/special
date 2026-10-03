@@ -1,0 +1,1345 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==================================================
+                        BODY
+================================================== */
+
+body {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+/* ==================================================
+                        NAVBAR
+================================================== */
+
+#navbar {
+    width: 15vw;
+    height: 100vh;
+
+    flex-shrink: 0;
+
+    background-color: rgb(26, 29, 46);
+    color: rgb(219, 214, 206);
+
+    overflow: hidden;
+}
+
+
+#one {
+    display: flex;
+    justify-content: space-between;
+
+    width: 60%;
+
+    margin: auto;
+}
+
+
+#one .text {
+    font-family: "Dancing Script", cursive;
+
+    font-weight: 900;
+
+    font-size: 185px;
+}
+
+
+#one i {
+    font-size: 45px;
+
+    margin: auto auto 30px 0;
+
+    color: rgb(231, 138, 160);
+
+    transform: rotate(13deg);
+}
+
+
+#one1 {
+    display: flex;
+
+    height: 71vh;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    font-size: 25px;
+
+    width: 100%;
+}
+
+
+#two {
+    width: 80%;
+
+    margin: auto;
+
+    display: flex;
+
+    padding-left: 20%;
+
+    align-items: center;
+}
+
+
+#two p {
+    font-family: "Patrick Hand";
+}
+
+
+#two i {
+    width: 25px;
+
+    text-align: center;
+}
+
+
+#two a {
+    display: flex;
+
+    align-items: center;
+
+    color: rgb(219, 214, 206);
+
+    text-decoration: none;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    transition: .3s;
+}
+
+
+#two a:hover {
+    background-color: #9D7394;
+}
+
+
+#one1 p {
+    margin-left: 15px;
+}
+
+
+#one3 {
+    height: 8.6vh;
+
+    width: 100%;
+
+    font-size: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+#one3 i {
+    color: rgb(233, 112, 132);
+}
+
+
+/* ==================================================
+                        MAIN
+================================================== */
+
+#main {
+    flex: 1;
+
+    width: auto;
+
+    height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #fff8f7,
+        #fff3ee,
+        #fffaf6
+    );
+
+    overflow: auto;
+}
+
+
+#main h1 {
+    text-align: center;
+
+    margin-top: 30px;
+
+    font-size: 70px;
+
+    color: #2d2438;
+
+    font-weight: 800;
+
+    font-family: "Kavoon", serif;
+
+    word-spacing: 20px;
+}
+
+
+#main h1 i {
+    color: #d67b97;
+
+    font-size: 30px;
+}
+
+
+.subtitle {
+    text-align: center;
+
+    margin-top: 8px;
+
+    color: #8c7b82;
+
+    font-size: 20px;
+
+    font-family: "Patrick Hand";
+}
+
+
+/* ==================================================
+                        NOTES
+================================================== */
+
+#notes {
+    width: 78%;
+
+    margin: 50px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 40px;
+}
+
+
+.note {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+
+.note:hover {
+    transform: translateY(-8px);
+}
+
+
+.envelope {
+    width: 200px;
+
+    height: 120px;
+
+    background: #f9e6e6;
+
+    position: relative;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+
+/* LEFT FOLD */
+
+.envelope::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 0;
+
+    height: 0;
+
+    border-left: 110px solid #f2d0d0;
+
+    border-top: 70px solid transparent;
+}
+
+
+/* RIGHT FOLD */
+
+.envelope::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: 0;
+
+    width: 0;
+
+    height: 0;
+
+    border-right: 110px solid #f2d0d0;
+
+    border-top: 70px solid transparent;
+}
+
+
+/* TOP FLAP */
+
+.envelope .flap {
+    position: absolute;
+
+    width: 0;
+
+    height: 0;
+
+    left: 0;
+
+    top: 0;
+
+    border-left: 110px solid transparent;
+
+    border-right: 110px solid transparent;
+
+    border-top: 70px solid #f6dada;
+}
+
+
+/* SEAL */
+
+.seal {
+    position: absolute;
+
+    width: 22px;
+
+    height: 22px;
+
+    border-radius: 50%;
+
+    background: #d9778f;
+
+    left: 50%;
+
+    top: 58px;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    box-shadow: 0 3px 6px rgba(0,0,0,.2);
+}
+
+
+.note p {
+    margin-top: 12px;
+
+    font-size: 22px;
+
+    color: #7b5b66;
+
+    font-family: "Patrick Hand";
+}
+
+
+/* BOTTOM TEXT */
+
+.bottom {
+    text-align: center;
+
+    font-size: 20px;
+
+    color: #8b6f7b;
+
+    margin-bottom: 40px;
+
+    font-family: "Patrick Hand";
+}
+
+
+/* ==================================================
+                        POPUP
+================================================== */
+
+#popup {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+
+    padding: 30px;
+}
+
+
+#popup.active {
+    display: flex;
+}
+
+
+/* ==================================================
+                    BLUR BACKGROUND
+================================================== */
+
+#popup-bg {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(30, 25, 30, .48);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* ==================================================
+                  LETTER CONTAINER
+================================================== */
+
+#letter-container {
+    position: relative;
+
+    width: 1000px;
+
+    height: 750px;
+
+    max-width: 95vw;
+
+    max-height: 90vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 2;
+}
+
+
+/* ==================================================
+                    BIG ENVELOPE
+================================================== */
+
+#big-envelope {
+    width: 420px;
+
+    height: 260px;
+
+    background: #f8e3e3;
+
+    position: absolute;
+
+    left: 20px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 20px 45px rgba(0,0,0,.25);
+
+    transition: 1s;
+
+    z-index: 5;
+}
+
+
+/* BOTTOM LEFT FOLD */
+
+#big-envelope::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    border-left: 210px solid #f0cfcf;
+
+    border-top: 130px solid transparent;
+}
+
+
+/* BOTTOM RIGHT FOLD */
+
+#big-envelope::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: 0;
+
+    border-right: 210px solid #f0cfcf;
+
+    border-top: 130px solid transparent;
+}
+
+
+/* ==================================================
+                      BIG FLAP
+================================================== */
+
+.big-flap {
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 0;
+
+    height: 0;
+
+    border-left: 210px solid transparent;
+
+    border-right: 210px solid transparent;
+
+    border-top: 130px solid #f7d9d9;
+
+    transform-origin: top;
+
+    transition: .8s;
+
+    z-index: 7;
+}
+
+
+/* ==================================================
+                        SEAL
+================================================== */
+
+.big-seal {
+    position: absolute;
+
+    width: 34px;
+
+    height: 34px;
+
+    background: #d9778f;
+
+    border-radius: 50%;
+
+    left: 50%;
+
+    top: 110px;
+
+    transform: translateX(-50%);
+
+    z-index: 9;
+
+    transition: .6s;
+}
+
+
+/* ==================================================
+                    PAPER / LETTER
+================================================== */
+
+#paper {
+
+    width: 680px;
+
+    height: 650px;
+
+    max-width: 80vw;
+
+    max-height: 82vh;
+
+    box-sizing: border-box;
+
+    background: #fffef9;
+
+    position: absolute;
+
+    left: 55%;
+
+    top: 50%;
+
+    transform: translate(-50%, 120px);
+
+    border-radius: 12px;
+
+    padding: 45px 55px;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.25);
+
+    font-family: "Cormorant Garamond", serif;
+
+    opacity: 0;
+
+    transition: 1s;
+
+    z-index: 10;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+}
+
+
+/* ==================================================
+                  PAPER SCROLLBAR
+================================================== */
+
+#paper::-webkit-scrollbar {
+    width: 7px;
+}
+
+
+#paper::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+#paper::-webkit-scrollbar-thumb {
+    background: #d8b7c0;
+
+    border-radius: 20px;
+}
+
+
+#paper::-webkit-scrollbar-thumb:hover {
+    background: #c596a5;
+}
+
+
+/* ==================================================
+                    LETTER HEADING
+================================================== */
+
+#paper h2 {
+
+    font-size: 38px;
+
+    color: #443;
+
+    margin: 0 0 30px 0;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+
+/* ==================================================
+                  LETTER CONTENT
+================================================== */
+
+#paper #letter-text {
+
+    font-size: 23px;
+
+    line-height: 1.6;
+
+    color: #555;
+
+    overflow-wrap: break-word;
+
+    word-wrap: break-word;
+}
+
+
+/* ==================================================
+                    CONTENT PARAGRAPHS
+================================================== */
+
+#paper #letter-text p {
+
+    margin: 0 0 22px 0;
+
+    padding: 0;
+}
+
+
+/* ==================================================
+                  CHALLENGE HEADING
+================================================== */
+
+#paper #letter-text h3 {
+
+    font-size: 30px;
+
+    line-height: 1.3;
+
+    color: #443;
+
+    text-align: center;
+
+    margin: 0 0 32px 0;
+
+    font-weight: 600;
+}
+
+
+/* ==================================================
+                      BOLD TEXT
+================================================== */
+
+#paper #letter-text strong {
+
+    color: #3f3338;
+
+    font-weight: 700;
+}
+
+
+/* ==================================================
+                      SIGNATURE
+================================================== */
+
+#paper > h3 {
+
+    margin-top: 35px;
+
+    font-size: 30px;
+
+    line-height: 1.4;
+
+    color: #444;
+
+    font-weight: 500;
+}
+
+
+/* ==================================================
+                    CLOSE BUTTON
+================================================== */
+
+#close {
+
+    position: fixed;
+
+    top: 25px;
+
+    right: 35px;
+
+    font-size: 45px;
+
+    color: white;
+
+    cursor: pointer;
+
+    z-index: 100;
+
+    line-height: 1;
+
+    transition: .3s;
+}
+
+
+#close:hover {
+
+    transform: rotate(90deg) scale(1.1);
+
+    color: #f2b5c5;
+}
+
+
+/* ==================================================
+                  OPEN ANIMATION
+================================================== */
+
+#popup.active .big-flap {
+
+    transform: rotateX(180deg);
+}
+
+
+#popup.active .big-seal {
+
+    opacity: 0;
+
+}
+
+
+#popup.active #big-envelope {
+
+    transform:
+        translateY(-50%)
+        translateX(-180px);
+
+    opacity: .35;
+}
+
+
+#popup.active #paper {
+
+    transform: translate(-50%, -50%);
+
+    opacity: 1;
+}
+
+
+/* ==================================================
+                    1800px+
+================================================== */
+
+@media (min-width: 1800px) {
+
+    #navbar {
+        width: 15vw;
+    }
+
+    #notes {
+        width: 82%;
+    }
+
+    #paper {
+        width: 720px;
+
+        height: 680px;
+    }
+
+}
+
+
+/* ==================================================
+                    1545px
+================================================== */
+
+@media (max-width: 1545px) {
+
+    #navbar {
+        width: 20vw;
+    }
+
+
+    #notes {
+
+        width: 75%;
+
+        margin: 50px auto;
+
+        gap: 30px;
+    }
+
+
+    .envelope {
+
+        width: 160px;
+
+        height: 100px;
+    }
+
+
+    .envelope::before {
+
+        border-left-width: 90px;
+
+        border-top-width: 60px;
+    }
+
+
+    .envelope::after {
+
+        border-right-width: 90px;
+
+        border-top-width: 60px;
+    }
+
+
+    .envelope .flap {
+
+        border-left-width: 90px;
+
+        border-right-width: 90px;
+
+        border-top-width: 60px;
+    }
+
+
+    #main h1 {
+
+        font-size: 55px;
+    }
+
+
+    #letter-container {
+
+        width: 900px;
+
+        height: 700px;
+    }
+
+
+    #paper {
+
+        width: 620px;
+
+        height: 620px;
+
+        left: 53%;
+
+        padding: 40px 50px;
+    }
+
+
+    #paper #letter-text {
+
+        font-size: 22px;
+    }
+
+}
+
+
+/* ==================================================
+                    1200px
+================================================== */
+
+@media (max-width: 1200px) {
+
+    #navbar {
+
+        width: 25vw;
+    }
+
+
+    #notes {
+
+        grid-template-columns: repeat(4, 1fr);
+
+        width: 85%;
+    }
+
+
+    #letter-container {
+
+        width: 800px;
+
+        height: 650px;
+    }
+
+
+    #big-envelope {
+
+        width: 330px;
+
+        height: 210px;
+
+        left: 0;
+    }
+
+
+    #big-envelope::before {
+
+        border-left-width: 165px;
+
+        border-top-width: 105px;
+    }
+
+
+    #big-envelope::after {
+
+        border-right-width: 165px;
+
+        border-top-width: 105px;
+    }
+
+
+    .big-flap {
+
+        border-left-width: 165px;
+
+        border-right-width: 165px;
+
+        border-top-width: 105px;
+    }
+
+
+    .big-seal {
+
+        top: 90px;
+    }
+
+
+    #paper {
+
+        width: 570px;
+
+        height: 600px;
+
+        left: 55%;
+
+        padding: 35px 45px;
+    }
+
+
+    #paper h2 {
+
+        font-size: 34px;
+    }
+
+
+    #paper #letter-text {
+
+        font-size: 21px;
+
+        line-height: 1.55;
+    }
+
+
+    #paper #letter-text h3 {
+
+        font-size: 28px;
+    }
+
+}
+
+
+/* ==================================================
+                    1000px
+================================================== */
+
+@media (max-width: 1000px) {
+
+    #navbar {
+
+        width: 28vw;
+    }
+
+
+    #main h1 {
+
+        font-size: 45px;
+
+        word-spacing: 10px;
+    }
+
+
+    #notes {
+
+        grid-template-columns: repeat(3, 1fr);
+
+        width: 90%;
+
+        gap: 30px;
+    }
+
+
+    #letter-container {
+
+        width: 90vw;
+
+        height: 85vh;
+    }
+
+
+    #big-envelope {
+
+        display: none;
+    }
+
+
+    #paper {
+
+        left: 50%;
+
+        width: 650px;
+
+        max-width: 90vw;
+
+        height: 75vh;
+
+        max-height: 75vh;
+
+        padding: 40px;
+    }
+
+
+    #paper h2 {
+
+        font-size: 32px;
+    }
+
+
+    #paper #letter-text {
+
+        font-size: 21px;
+    }
+
+}
+
+
+/* ==================================================
+                    750px
+================================================== */
+
+@media (max-width: 750px) {
+
+    body {
+
+        overflow: auto;
+    }
+
+
+    #navbar {
+
+        display: none;
+    }
+
+
+    #main {
+
+        width: 100vw;
+
+        height: 100vh;
+    }
+
+
+    #main h1 {
+
+        font-size: 38px;
+
+        margin-top: 25px;
+    }
+
+
+    .subtitle {
+
+        font-size: 18px;
+
+        padding: 0 20px;
+    }
+
+
+    #notes {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        width: 90%;
+
+        gap: 25px;
+    }
+
+
+    .envelope {
+
+        width: 150px;
+
+        height: 90px;
+    }
+
+
+    .envelope::before {
+
+        border-left-width: 85px;
+
+        border-top-width: 55px;
+    }
+
+
+    .envelope::after {
+
+        border-right-width: 85px;
+
+        border-top-width: 55px;
+    }
+
+
+    .envelope .flap {
+
+        border-left-width: 85px;
+
+        border-right-width: 85px;
+
+        border-top-width: 55px;
+    }
+
+
+    #popup {
+
+        padding: 15px;
+    }
+
+
+    #paper {
+
+        width: 94vw;
+
+        height: 85vh;
+
+        max-width: 94vw;
+
+        max-height: 85vh;
+
+        padding: 30px 25px;
+    }
+
+
+    #paper h2 {
+
+        font-size: 30px;
+
+        margin-bottom: 25px;
+    }
+
+
+    #paper #letter-text {
+
+        font-size: 20px;
+
+        line-height: 1.5;
+    }
+
+
+    #paper #letter-text p {
+
+        margin-bottom: 18px;
+    }
+
+
+    #paper #letter-text h3 {
+
+        font-size: 25px;
+
+        margin-bottom: 25px;
+    }
+
+
+    #close {
+
+        top: 12px;
+
+        right: 18px;
+
+        font-size: 38px;
+    }
+
+}
+
+
+/* ==================================================
+                    500px
+================================================== */
+
+@media (max-width: 500px) {
+
+    #main h1 {
+
+        font-size: 30px;
+
+        word-spacing: 5px;
+    }
+
+
+    #notes {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+    }
+
+
+    .envelope {
+
+        width: 130px;
+
+        height: 80px;
+    }
+
+
+    .envelope::before {
+
+        border-left-width: 75px;
+
+        border-top-width: 48px;
+    }
+
+
+    .envelope::after {
+
+        border-right-width: 75px;
+
+        border-top-width: 48px;
+    }
+
+
+    .envelope .flap {
+
+        border-left-width: 75px;
+
+        border-right-width: 75px;
+
+        border-top-width: 48px;
+    }
+
+
+    .seal {
+
+        width: 18px;
+
+        height: 18px;
+
+        top: 48px;
+    }
+
+
+    .note p {
+
+        font-size: 20px;
+    }
+
+
+    #paper {
+
+        width: 94vw;
+
+        height: 88vh;
+
+        padding: 28px 22px;
+    }
+
+
+    #paper h2 {
+
+        font-size: 27px;
+    }
+
+
+    #paper #letter-text {
+
+        font-size: 19px;
+
+        line-height: 1.5;
+    }
+
+
+    #paper #letter-text h3 {
+
+        font-size: 23px;
+    }
+
+}

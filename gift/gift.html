@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Our Forever 💍❤️</title>
+
+    <link
+        rel="stylesheet"
+        href="gift.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         FLOATING HEARTS CONTAINER
+    ================================== -->
+
+    <div id="hearts"></div>
+
+
+    <!-- =================================
+         MAIN CONTAINER
+    ================================== -->
+
+    <div class="container">
+
+
+        <!-- =================================
+             PAGE 1
+             MARRIAGE QUESTION
+        ================================== -->
+
+        <section
+            class="screen active"
+            id="questionScreen"
+        >
+
+            <div class="ring">
+                💍
+            </div>
+
+
+            <h1>
+                Will you marry me?
+            </h1>
+
+
+            <p class="questionText">
+                I have one very important question
+                for you... ❤️
+            </p>
+
+
+            <div class="buttons">
+
+                <button
+                    id="yesBtn"
+                >
+                    YES ❤️
+                </button>
+
+
+                <button
+                    id="noBtn"
+                >
+                    NO 🥺
+                </button>
+
+            </div>
+
+
+            <p id="noMessage"></p>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             PAGE 2
+             CELEBRATION
+        ================================== -->
+
+        <section
+            class="screen"
+            id="celebrationScreen"
+        >
+
+            <div class="bigEmoji">
+                🎉💍❤️
+            </div>
+
+
+            <h1>
+                YAYYYYY!!!
+            </h1>
+
+
+            <p>
+                YOU SAID YESSSSS! 🥹❤️
+            </p>
+
+
+            <p>
+                You just made me the happiest
+                person ever.
+            </p>
+
+
+            <button
+                class="nextBtn"
+                onclick="showScreen('declarationScreen')"
+            >
+                Continue ❤️
+            </button>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             PAGE 3
+             DECLARATION
+        ================================== -->
+
+        <section
+            class="screen"
+            id="declarationScreen"
+        >
+
+            <div class="icon">
+                💌
+            </div>
+
+
+            <h1>
+                Our Love Declaration
+            </h1>
+
+
+            <div class="declaration">
+
+                <p>
+                    We promise to love each other,
+                    care for each other,
+                    respect each other,
+                    and support each other
+                    through every moment.
+                </p>
+
+
+                <p>
+                    Through every smile,
+                    every year,
+                    every up and down...
+                    we choose each other.
+                </p>
+
+
+                <p>
+                    We will build our beautiful
+                    future together. ❤️
+                </p>
+
+
+                <h2>
+                    Do you agree to our forever? 💍
+                </h2>
+
+            </div>
+
+
+            <button
+                class="nextBtn"
+                onclick="goToMyApproval()"
+            >
+                I Agree ❤️
+            </button>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             PAGE 4
+             MY APPROVAL
+        ================================== -->
+
+        <section
+            class="screen"
+            id="myApprovalScreen"
+        >
+
+            <div class="icon">
+                💗
+            </div>
+
+
+            <h1>
+                My Approval
+            </h1>
+
+
+            <p>
+                I,
+                <strong>
+                    Kirandeep Kaur urf Fugu
+                </strong>,
+            </p>
+
+
+            <p>
+                agree to love, honor and stay
+                with you forever and ever. ❤️
+            </p>
+
+
+
+            <!-- SIGNATURE AREA -->
+
+            <div class="signatureBox">
+
+                <p class="signTitle">
+                    Sign here ✍️
+                </p>
+
+
+                <canvas
+                    id="mySignature"
+                ></canvas>
+
+
+                <button
+                    class="clearBtn"
+                    onclick="clearSignature('mySignature')"
+                >
+                    Clear Signature
+                </button>
+
+            </div>
+
+
+
+            <button
+                class="nextBtn"
+                onclick="goToHisApproval()"
+            >
+                Continue 💕
+            </button>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             PAGE 5
+             HIS APPROVAL
+        ================================== -->
+
+        <section
+            class="screen"
+            id="hisApprovalScreen"
+        >
+
+            <div class="icon">
+                💙
+            </div>
+
+
+            <h1>
+                His Approval
+            </h1>
+
+
+            <p>
+                I,
+                <strong>
+                    Krish Khanna urf Fugu
+                </strong>,
+            </p>
+
+
+            <p>
+                agree to love, honor and stay
+                with you forever and ever. 💙
+            </p>
+
+
+
+            <!-- SIGNATURE AREA -->
+
+            <div class="signatureBox">
+
+                <p class="signTitle">
+                    Sign here ✍️
+                </p>
+
+
+                <canvas
+                    id="hisSignature"
+                ></canvas>
+
+
+                <button
+                    class="clearBtn"
+                    onclick="clearSignature('hisSignature')"
+                >
+                    Clear Signature
+                </button>
+
+            </div>
+
+
+
+            <button
+                class="nextBtn"
+                onclick="finishProposal()"
+            >
+                I Agree ❤️
+            </button>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             PAGE 6
+             FINAL CERTIFICATE
+        ================================== -->
+
+        <section
+            class="screen"
+            id="finalScreen"
+        >
+
+
+            <div class="certificate">
+
+                <div class="certificateTop">
+                    💍 ❤️ 💍
+                </div>
+
+                <p class="certificateSmall">
+                    OFFICIAL DECLARATION OF LOVE
+                </p>
+
+                <h1 class="certificateTitle">
+                    Our Marriage Declaration
+                </h1>
+
+                <div class="certificateLine"></div>
+
+                <p class="certificateText">
+                    This declaration proudly confirms that
+                </p>
+
+                <h2 class="coupleNames">
+                    Kirandeep Kaur urf Fugu
+                    <span>&</span>
+                    Krish Khanna urf Fugu
+                </h2>
+
+                <div class="declarationLetter">
+                    <p>
+                        We, Kirandeep Kaur urf Fugu and Krish Khanna urf Fugu,
+                        declare that we have chosen each other and willingly
+                        promise to love, respect, care for and support each other.
+                    </p>
+
+                    <p>
+                        We promise to stand together through every happy moment,
+                        every difficult moment, every dream and every new beginning.
+                        We choose each other, today and always. ❤️
+                    </p>
+
+                    <p>
+                        With our signatures below, we confirm our agreement to
+                        this declaration and our promise to our forever together.
+                    </p>
+                </div>
+
+                <div class="certificateSignatures">
+
+                    <div class="certificateSignature">
+                        <div class="signatureImageBox">
+                            <img id="mySignatureImage" alt="Kirandeep Signature">
+                        </div>
+                        <div class="signatureLine"></div>
+                        <strong>Kirandeep Kaur urf Fugu</strong>
+                        <small>❤️ Bride / Partner</small>
+                    </div>
+
+                    <div class="certificateSignature">
+                        <div class="signatureImageBox">
+                            <img id="hisSignatureImage" alt="Krish Signature">
+                        </div>
+                        <div class="signatureLine"></div>
+                        <strong>Krish Khanna urf Fugu</strong>
+                        <small>💙 Groom / Partner</small>
+                    </div>
+
+                </div>
+
+                <div class="certificateBottom">
+                    <p>❤️ Together Forever ❤️</p>
+                    <p id="certificateDate"></p>
+                </div>
+
+                <div class="marriedText">
+                    WE ARE MARRIED! 💍❤️
+                </div>
+
+            </div>
+
+
+            <div class="finalMessage">
+
+                <p>
+                    Our Forever Starts Here 💕
+                </p>
+
+            </div>
+
+
+            <button
+                class="resetBtn"
+                onclick="resetEverything()"
+            >
+                Start Again
+            </button>
+
+
+        </section>
+
+
+    </div>
+
+
+
+    <!-- =================================
+         CONFETTI
+    ================================== -->
+
+    <div id="confetti"></div>
+
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script src="gift.js"></script>
+
+
+</body>
+
+</html>

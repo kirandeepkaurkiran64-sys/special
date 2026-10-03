@@ -1,0 +1,281 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+}
+#navbar{
+    width: 15vw;
+    height: 100vh;
+    background-color: rgb(26, 29, 46);
+    color: rgb(219, 214, 206);
+}
+#one {
+    display: flex;
+    justify-content: space-between ;
+    width: 60%;
+    margin: auto auto 0 auto;
+    
+}
+#one .text{
+  font-family: "Dancing Script", cursive;
+  font-weight: 900;
+  font-size: 185px;
+}
+#one i{
+    font-size: 45px;
+    margin: auto auto 30px 0;
+    color: rgb(231, 138, 160);
+    transform: rotate(13deg);
+}
+#two{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    padding-left:20%;
+    align-items: center;
+}
+#two p{
+    font-family: "Patrick Hand";
+}
+#one1{
+    display: flex;
+    height: 71vh;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    width: 100%;
+}
+#two i{
+    width: 25px;  
+    text-align: center;
+
+}
+#two a{
+    display: flex;
+    color: rgb(219, 214, 206);
+    text-decoration: none;
+    padding: 15px;
+}
+#two a:hover{
+    
+    background-color: #9D7394;
+    border-radius: 12px;
+}
+#one1 p{
+    margin-left:15px ;
+}
+#one3{ 
+    height: 8.6vh; 
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#one3 i{
+    color: rgb(233, 112, 132);
+}
+#hero {
+    background-image: url("image.png");
+    background-size: cover;
+    width: 85vw;
+    height: 100vh;
+    background-position:  bottom center ;
+}
+#wish{
+    width: 30vw;
+    height: 40vh;
+    margin-left: 6vw;
+    margin-top: 6vh ;
+    
+    color:  rgb(26, 29, 46);
+}
+#wish #p1{
+    font-size: 80px;
+    text-align: center;
+    font-family: "Kavoon";
+    font-weight: bold;
+    word-spacing: 25px ;
+}
+#wish #p2{
+    font-size: 35px;
+    padding-top: 30px;
+    font-family: "Patrick Hand";
+    font-weight: 400;
+}
+#glass {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 48%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;    
+    position:absolute;
+    bottom: 7vh;
+    padding: 35px 60px 35px 60px;
+}
+
+.item{
+    display: flex;
+    align-items: center; 
+    gap: 10px;           
+}
+.item i{
+    font-size: 95px;
+    
+    color: #E8C97A;
+    font-weight: 100;
+}
+#inner #p4{
+    font-size: 60px;
+    font-weight: 200;
+    
+    color: #FFF4D6;
+}
+#inner i{
+    font-size: 60px ;
+    color: #FFF4D6;
+}
+#inner #p11{
+    font-size: 25px;
+    font-weight: 200;
+    color: #E6D8B5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:1800px){
+#wish{
+    width: 40vw;
+    height: 40vh;
+}
+}
+@media (max-width: 1800px){
+    #navbar{
+    width: 20vw;
+}
+#wish{
+    width: 40vw;
+    height: 40vh;
+}
+#glass {
+    left: 57%;
+}
+}
+@media (max-width:1545px) {
+   
+#wish{
+    width: 47vw;
+    height: 40vh;
+}
+#wish #p1{
+    font-size: 70px;
+    word-spacing: 10px ;
+}
+#wish #p2{
+    font-size: 30px;
+    padding-top: 20px;  
+    font-weight: 500;
+}
+ #glass {
+    left: 55%;
+    
+    bottom: 5vh;
+    padding: 25px 40px 25px 40px;
+}
+.item{
+    gap: 10px;           
+}
+.item i{
+    font-size: 75px;
+}
+#inner #p4{
+    font-size: 40px;
+}
+#inner i{
+    font-size: 40px ;
+}
+#inner #p11{
+    font-size: 20px;
+}
+#one3{
+    font-size: 25px;
+}
+}
+
+@media (max-width:1100px) {
+     #navbar{
+    width: 30vw;
+}
+#wish{
+    width: 51vw;
+}
+#wish #p1{
+    font-size: 55px;
+    word-spacing: 5px ;
+}
+#wish #p2{
+    font-size: 27px;
+    padding-top: 20px;  
+    font-weight: 700;
+}
+ #glass {
+    left: 60%;
+    bottom: 7vh;
+}
+.item{
+    gap: 5px;           
+}
+.item i{
+    font-size: 55px;
+}
+#inner #p4{
+    font-size: 30px;
+}
+#inner i{
+    font-size: 30px ;
+}
+#inner #p11{
+    font-size: 15px;
+}
+}

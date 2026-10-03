@@ -1,0 +1,388 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+}
+#navbar{
+    width: 15vw;
+    height: 100vh;
+    background-color: rgb(26, 29, 46);
+    color: rgb(219, 214, 206);
+}
+#one {
+    display: flex;
+    justify-content: space-between ;
+    width: 60%;
+    margin: auto auto 0 auto;
+    
+}
+#one .text{
+  font-family: "Dancing Script", cursive;
+  font-weight: 900;
+  font-size: 185px;
+}
+#one i{
+    font-size: 45px;
+    margin: auto auto 30px 0;
+    color: rgb(231, 138, 160);
+    transform: rotate(13deg);
+}
+#two{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    padding-left:20%;
+    align-items: center;
+}
+#two p{
+    font-family: "Patrick Hand";
+}
+#one1{
+    display: flex;
+    height: 71vh;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    width: 100%;
+}
+#two i{
+    width: 25px;  
+    text-align: center;
+
+}
+#two a{
+    display: flex;
+    color: rgb(219, 214, 206);
+    text-decoration: none;
+    padding: 15px;
+}
+#two a:hover{
+    
+    background-color: #9D7394;
+    border-radius: 12px;
+}
+#one1 p{
+    margin-left:15px ;
+}
+#one3{ 
+    height: 8.6vh; 
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#one3 i{
+    color: rgb(233, 112, 132);
+}
+
+/* ================= HALL OF FAME ================= */
+
+.hall-container{
+    width:85%;
+    padding:40px 50px;
+    background:#fffdfb;
+    overflow-y:auto;
+}
+
+.hall-container h1{
+    text-align:center;
+    font-family:"Kavoon", cursive;
+    font-size:82px;
+    color:#4b2d3a;
+    margin-bottom:10px;
+}
+
+.hall-container>p{
+    text-align:center;
+    font-family:"Patrick Hand", cursive;
+    font-size:28px;
+    color:#8d7c83;
+    margin-bottom:45px;
+}
+
+/* ================= GRID ================= */
+
+.hall-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px;
+}
+
+/* ================= CARD ================= */
+
+.award-card{
+
+    background:#fff8f9;
+
+    border-radius:22px;
+
+    padding:28px 20px;
+
+    text-align:center;
+
+    border:2px solid transparent;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.award-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#f0a4be;
+
+    box-shadow:0 14px 30px rgba(240,164,190,.35);
+
+}
+
+/* ================= ICON ================= */
+
+.award-icon{
+
+    font-size:60px;
+
+    margin-bottom:18px;
+
+}
+
+/* ================= TITLE ================= */
+
+.award-card h3{
+
+    font-family:"Patrick Hand", cursive;
+
+    font-size:30px;
+
+    color:#4b2d3a;
+
+    margin-bottom:15px;
+
+}
+
+/* ================= DESCRIPTION ================= */
+
+.award-card p{
+
+    font-family:"Patrick Hand", cursive;
+
+    font-size:22px;
+
+    color:#76676d;
+
+    line-height:1.5;
+
+    margin-bottom:18px;
+
+}
+
+/* ================= STARS ================= */
+
+.stars{
+
+    color:#f2b63d;
+
+    font-size:24px;
+
+    letter-spacing:4px;
+
+}
+
+/* ================= FOOTER ================= */
+
+.hall-footer{
+
+    width:55%;
+
+    margin:45px auto 10px;
+
+    background:linear-gradient(to right,#fde6ec,#fff6f8,#fde6ec);
+
+    border-radius:40px;
+
+    text-align:center;
+
+    padding:18px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.hall-footer p{
+
+    font-family:"Patrick Hand", cursive;
+
+    font-size:28px;
+
+    color:#8c5570;
+
+}
+
+/* ================= Decorative Hover ================= */
+
+.award-card:hover .award-icon{
+
+    transform:rotate(8deg) scale(1.15);
+
+    transition:.3s;
+
+}
+
+/* ================= Scroll ================= */
+
+.hall-container::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.hall-container::-webkit-scrollbar-thumb{
+
+    background:#efb4c8;
+
+    border-radius:20px;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px){
+
+    .hall-grid{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+}
+
+@media(max-width:900px){
+
+    .hall-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .hall-container h1{
+
+        font-size:60px;
+
+    }
+
+    .hall-footer{
+
+        width:90%;
+
+    }
+
+}
+
+@media(max-width:650px){
+
+    .hall-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .hall-container{
+
+        padding:30px 20px;
+
+    }
+
+    .hall-container h1{
+
+        font-size:45px;
+
+    }
+
+    .hall-container>p{
+
+        font-size:22px;
+
+    }
+
+    .award-card h3{
+
+        font-size:26px;
+
+    }
+
+    .award-card p{
+
+        font-size:20px;
+
+    }
+
+    .hall-footer p{
+
+        font-size:22px;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:1800px){
+#wish{
+    width: 40vw;
+    height: 40vh;
+}
+}
+@media (max-width: 1800px){
+    #navbar{
+    width: 20vw;
+}
+}
+@media (max-width:1545px) {
+
+#one3{
+    font-size: 25px;
+}
+}
+
+@media (max-width:1100px) {
+     #navbar{
+    width: 30vw;
+}
+}
